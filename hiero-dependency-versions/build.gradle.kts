@@ -57,7 +57,7 @@ dependencies.constraints {
     api("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:$jackson") {
         because("com.fasterxml.jackson.dataformat.yaml")
     }
-    api("com.github.ben-manes.caffeine:caffeine:3.2.4") { because("com.github.benmanes.caffeine") }
+    api("com.github.ben-manes.caffeine:caffeine:3.3.1") { because("com.github.benmanes.caffeine") }
     api("com.github.docker-java:docker-java-api:3.7.1") { because("com.github.dockerjava.api") }
     api("com.github.luben:zstd-jni:1.5.7-22") { because("com.github.luben.zstd_jni") }
     api("com.github.spotbugs:spotbugs-annotations:4.9.8") {
