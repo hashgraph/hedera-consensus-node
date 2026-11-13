@@ -100,7 +100,7 @@ jobs:
           comment_mode: errors # only comment if we could not find or parse the JUnit XML files
 
       - name: Upload Full Otter Tests Report Artifacts
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         if: ${{ !cancelled() }}
         with:
           name: Full Otter Tests Report
@@ -108,7 +108,7 @@ jobs:
           retention-days: 7
 
       - name: Upload Full Otter Tests Container Logs
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         if: ${{ inputs.enable-network-log-capture && steps.gradle-full-otter-tests.conclusion == 'failure' && !cancelled() }}
         with:
           name: Full Otter Tests Container Logs

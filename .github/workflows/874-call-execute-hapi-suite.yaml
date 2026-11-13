@@ -194,7 +194,7 @@ jobs:
           comment_mode: errors # only comment if we could not find or parse the JUnit XML files
 
       - name: Upload HAPI Test ${{ env.SUITE_LABEL }} Report Artifacts
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: "HAPI Test ${{ env.SUITE_LABEL }} Reports${{ env.ARTIFACT_SUFFIX }}"
           path: |
@@ -205,7 +205,7 @@ jobs:
       # The @Tag(MULTINETWORK) CLPR suites run under testSubprocess, so their node + test-client
       # logs live under hedera-node/test-clients/build, including the multinetwork-test-clients dir.
       - name: Upload HAPI Test ${{ env.SUITE_LABEL }} Network Logs
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         if: ${{ !cancelled() && inputs.enable-network-log-capture == 'true' && steps.gradle-hapi.conclusion == 'failure' }}
         with:
           name: "HAPI Test ${{ env.SUITE_LABEL }} Network Logs${{ env.ARTIFACT_SUFFIX }}"
@@ -219,7 +219,7 @@ jobs:
           retention-days: 7
 
       - name: Upload HAPI Test ${{ env.SUITE_LABEL }} Failure Artifacts
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         if: ${{ !cancelled() && steps.gradle-hapi.conclusion == 'failure' }}
         with:
           name: "HAPI Test ${{ env.SUITE_LABEL }} Failure Artifacts${{ env.ARTIFACT_SUFFIX }}"
