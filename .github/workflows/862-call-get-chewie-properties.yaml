@@ -34,7 +34,7 @@ jobs:
       mdlt-length: ${{ steps.get-chewie-props.outputs.mdlt-length }}
     steps:
       - name: Initialize GitHub Job
-        uses: pandaswhocode/initialize-github-job@c96d9edf7816b4f333b558f2e07fe81ebf1e822d # v1.3.0
+        uses: pandaswhocode/initialize-github-job@74303607c68fe88ff9b7bfc05c40ca948fa04b13 # v1.5.0
         with:
           checkout: "true"
           checkout-token: ${{ secrets.checkout-token }}
