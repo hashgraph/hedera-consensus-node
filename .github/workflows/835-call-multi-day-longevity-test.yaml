@@ -201,7 +201,7 @@ jobs:
     steps:
       - name: Prepare Runner
         id: prepare-runner
-        uses: pandaswhocode/initialize-github-job@5dbfbc4329ceab48a57d983325dadbd3ec8123e9 # v1.2.2
+        uses: pandaswhocode/initialize-github-job@74303607c68fe88ff9b7bfc05c40ca948fa04b13 # v1.5.0
         with:
           checkout: "true"
           # The workflow ref supplies the CITR support tooling (kubectlt, Taskfiles, values files).
@@ -913,7 +913,7 @@ jobs:
       # Checked out at the workflow ref for the support tooling (support/citr/kubectlt); this job
       # does not build anything from the ref under test.
       - name: Prepare Runner
-        uses: pandaswhocode/initialize-github-job@5dbfbc4329ceab48a57d983325dadbd3ec8123e9 # v1.2.2
+        uses: pandaswhocode/initialize-github-job@74303607c68fe88ff9b7bfc05c40ca948fa04b13 # v1.5.0
         with:
           checkout: "true"
           checkout-ref: "${{ github.ref }}"
@@ -1059,7 +1059,7 @@ jobs:
       NAMESPACE: ${{ needs.acquire-kubernetes-resources.outputs.namespace }}
     steps:
       - name: Prepare Runner
-        uses: pandaswhocode/initialize-github-job@5dbfbc4329ceab48a57d983325dadbd3ec8123e9 # v1.2.2
+        uses: pandaswhocode/initialize-github-job@74303607c68fe88ff9b7bfc05c40ca948fa04b13 # v1.5.0
         with:
           checkout: "true"
           # Templates come from the workflow ref, not the build tag: the MDLT templates do not exist

@@ -72,7 +72,7 @@ jobs:
 
     steps:
       - name: Prepare Job
-        uses: pandaswhocode/initialize-github-job@5dbfbc4329ceab48a57d983325dadbd3ec8123e9 # v1.2.2
+        uses: pandaswhocode/initialize-github-job@74303607c68fe88ff9b7bfc05c40ca948fa04b13 # v1.5.0
         with:
           checkout: "true"
           checkout-ref: "${{ inputs.ref }}"
@@ -263,7 +263,7 @@ jobs:
           git config --global core.eol lf
 
       - name: Prepare Job
-        uses: pandaswhocode/initialize-github-job@5dbfbc4329ceab48a57d983325dadbd3ec8123e9 # v1.2.2
+        uses: pandaswhocode/initialize-github-job@74303607c68fe88ff9b7bfc05c40ca948fa04b13 # v1.5.0
         with:
           checkout: "true"
           checkout-ref: "${{ inputs.ref }}"
@@ -461,7 +461,7 @@ jobs:
       failed-tests: ${{ steps.set-failure-mode.outputs.failed-tests }}
     steps:
       - name: Initialize GitHub Job
-        uses: pandaswhocode/initialize-github-job@5dbfbc4329ceab48a57d983325dadbd3ec8123e9 # v1.2.2
+        uses: pandaswhocode/initialize-github-job@74303607c68fe88ff9b7bfc05c40ca948fa04b13 # v1.5.0
         with:
           checkout: "true"
           checkout-token: "${{ secrets.GITHUB_TOKEN }}"
