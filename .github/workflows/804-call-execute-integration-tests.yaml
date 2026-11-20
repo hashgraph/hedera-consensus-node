@@ -99,7 +99,7 @@ jobs:
 
       - name: Upload Integration Test Report Artifacts
         id: upload-test-report-artifacts
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: Integration Test Report
           path: "**/build/test-results/testIntegration/TEST-*.xml"
@@ -107,7 +107,7 @@ jobs:
 
       - name: Upload Otter Integration Tests Turtle Logs
         id: upload-otter-turtle-integration-logs
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         if: ${{ !cancelled() && inputs.enable-network-log-capture == 'true' && steps.gradle-integration-tests.conclusion == 'failure' }}
         with:
           name: Otter Integration Tests Turtle Logs
@@ -116,7 +116,7 @@ jobs:
 
       - name: Upload Otter Integration Tests Container Logs
         id: upload-otter-container-integration-logs
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         if: ${{ !cancelled() && inputs.enable-network-log-capture == 'true' && steps.gradle-integration-tests.conclusion == 'failure' }}
         with:
           name: Otter Integration Tests Container Logs
