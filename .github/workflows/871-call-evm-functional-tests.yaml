@@ -474,7 +474,7 @@ jobs:
       - name: Upload diagnostics
         if: ${{ failure() }}
         continue-on-error: true
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: EVM Functional Tests Diagnostics (${{ steps.shard.outputs.slug || strategy.job-index }})
           path: ${{ env.SHARD_LOGS_DIR }}
@@ -527,7 +527,7 @@ jobs:
       - name: Upload Shard Result
         if: ${{ !cancelled() }}
         continue-on-error: true
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: evm-shard-result-${{ strategy.job-index }}
           path: ${{ env.SHARD_RESULTS_DIR }}
