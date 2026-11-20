@@ -60,7 +60,7 @@ jobs:
       failure-mode: ${{ steps.set-failure-mode.outputs.failure-mode }}
     steps:
       - name: Prepare Job
-        uses: pandaswhocode/initialize-github-job@5dbfbc4329ceab48a57d983325dadbd3ec8123e9 # v1.2.2
+        uses: pandaswhocode/initialize-github-job@74303607c68fe88ff9b7bfc05c40ca948fa04b13 # v1.5.0
         with:
           checkout: "true"
           checkout-ref: "${{ inputs.ref }}"
@@ -233,7 +233,7 @@ jobs:
         run: printf 'GRADLE_USER_HOME=%s\\.gradle\n' "${RUNNER_WORKSPACE%\\*}" >> "${GITHUB_ENV}"
 
       - name: Prepare Job
-        uses: pandaswhocode/initialize-github-job@5dbfbc4329ceab48a57d983325dadbd3ec8123e9 # v1.2.2
+        uses: pandaswhocode/initialize-github-job@74303607c68fe88ff9b7bfc05c40ca948fa04b13 # v1.5.0
         with:
           checkout: "true"
           checkout-ref: "${{ inputs.ref }}"
@@ -366,7 +366,7 @@ jobs:
       failed-tests: ${{ steps.set-failure-mode.outputs.failed-tests }}
     steps:
       - name: Initialize GitHub Job
-        uses: pandaswhocode/initialize-github-job@5dbfbc4329ceab48a57d983325dadbd3ec8123e9 # v1.2.2
+        uses: pandaswhocode/initialize-github-job@74303607c68fe88ff9b7bfc05c40ca948fa04b13 # v1.5.0
         with:
           checkout: "true"
           checkout-token: "${{ secrets.GITHUB_TOKEN }}"

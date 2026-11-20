@@ -114,7 +114,7 @@ jobs:
       VERSION: ${{ needs.validate-input.outputs.version }}
     steps:
       - name: Prepare Runner
-        uses: pandaswhocode/initialize-github-job@c96d9edf7816b4f333b558f2e07fe81ebf1e822d # v1.3.0
+        uses: pandaswhocode/initialize-github-job@74303607c68fe88ff9b7bfc05c40ca948fa04b13 # v1.5.0
         with:
           checkout: "true"
           checkout-ref: refs/tags/${{ inputs.tag }}
