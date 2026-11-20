@@ -381,7 +381,7 @@ jobs:
         run: gomplate -f .github/workflows/templates/slack-sdpt-sdlt-success.json.tpl -o slack_payload.json
 
       - name: Report Success (slack)
-        uses: slackapi/slack-github-action@0d95c9a7becc1e6e297d76df9bc735c44f4cbcbc # v3.0.5
+        uses: slackapi/slack-github-action@dcb1066f776dd043e64d0e8ba94ca15cc7e1875d # v4.0.0
         with:
           webhook: ${{ secrets.SLACK_CITR_PERFORMANCE_TEST_REPORTS }}
           webhook-type: incoming-webhook
@@ -519,7 +519,7 @@ jobs:
 
       - name: Report failure (slack performance-test-reports)
         if: ${{ steps.set-service.outputs.service != 'CI/CD Workflows' }}
-        uses: slackapi/slack-github-action@0d95c9a7becc1e6e297d76df9bc735c44f4cbcbc # v3.0.5
+        uses: slackapi/slack-github-action@dcb1066f776dd043e64d0e8ba94ca15cc7e1875d # v4.0.0
         with:
           webhook: ${{ secrets.SLACK_CITR_PERFORMANCE_TEST_REPORTS }}
           webhook-type: incoming-webhook
@@ -528,7 +528,7 @@ jobs:
 
       - name: Report failure (slack citr-failures)
         if: ${{ steps.set-service.outputs.service == 'CI/CD Workflows' }}
-        uses: slackapi/slack-github-action@0d95c9a7becc1e6e297d76df9bc735c44f4cbcbc # v3.0.5
+        uses: slackapi/slack-github-action@dcb1066f776dd043e64d0e8ba94ca15cc7e1875d # v4.0.0
         with:
           webhook: ${{ secrets.SLACK_CITR_FAILURES_WEBHOOK }}
           webhook-type: incoming-webhook
