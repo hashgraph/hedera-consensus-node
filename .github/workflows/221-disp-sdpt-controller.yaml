@@ -215,7 +215,7 @@ jobs:
           checkout-fetch-depth: "0"
 
       - name: "Trigger 225: [DISP] Release Chewie Allocation"
-        uses: step-security/workflow-dispatch@b4c1dc0afa074d0b4f0e653d3b80d4b2798599aa # v1.2.7
+        uses: step-security/workflow-dispatch@024752877e2bfa07299ee4204cc5f7e7c14ff930 # v1.3.21
         with:
           workflow: .github/workflows/225-disp-release-chewie-allocation.yaml
           repo: hiero-ledger/hiero-consensus-node # ensure we are executing in the hiero-ledger org
